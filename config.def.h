@@ -5,7 +5,7 @@
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
-static char font[] = "Liberation Mono:pixelsize=12:antialias=true:autohint=true";
+static char font[] = "Noto Mono:pixelsize=16:antialias=true:autohint=true";
 static int borderpx = 2;
 
 /*
@@ -84,43 +84,33 @@ static unsigned int tabspaces = 8;
 
 /* Terminal colors (16 first used in escape sequence) */
 static const char *colorname[] = {
-	/* 8 normal colors */
-	"black",
-	"red3",
-	"green3",
-	"yellow3",
-	"blue2",
-	"magenta3",
-	"cyan3",
-	"gray90",
-
-	/* 8 bright colors */
-	"gray50",
-	"red",
-	"green",
-	"yellow",
-	"#5c5cff",
-	"magenta",
-	"cyan",
-	"white",
-
-	[255] = 0,
-
-	/* more colors can be added after 255 to use with DefaultXX */
-	"#cccccc",
-	"#555555",
+	"#1C1C1C", // color0 (Black)
+	"#992525", // color1 (Dark Red)
+	"#2C9B43", // color2 (Dark Green)
+	"#D27049", // color3 (Dark Yellow)
+	"#3A85E2", // color4 (Dark Blue)
+	"#88537B", // color5 (Dark Magenta)
+	"#477B7B", // color6 (Dark Cyan)
+	"#B4B4B4", // color7 (Light Grey)
+	"#1A1717", // color8 (Dark Grey)
+	"#CA4D4D", // color9 (Bright Red)
+	"#36BF52", // color10 (Bright Green)
+	"#E5AB57", // color11 (Bright Yellow)
+	"#609EEB", // color12 (Bright Blue)
+	"#BA8BAF", // color13 (Bright Magenta)
+	"#76A0A0", // color14 (Bright Cyan)
+	"#DADADA", // color15 (White)
 };
 
 
 /*
  * Default colors (colorname index)
- * foreground, background, cursor, reverse cursor
+ * background, foreground, cursor, reverse cursor
  */
-static unsigned int defaultfg = 7;
 static unsigned int defaultbg = 0;
-static unsigned int defaultcs = 256;
-static unsigned int defaultrcs = 257;
-
+static unsigned int defaultfg = 15;
+static unsigned int defaultcs = 15;
+static unsigned int defaultrcs = 15;
 /*
  * Default shape of cursor
  * 2: Block ("█")
